@@ -1,4 +1,2 @@
-os: Windows Server 2012
-
 before_build:
   - ps: Import-PfxCertificate -FilePath .\BasicOutlookAddIn\BasicOutlookAddIn_TemporaryKey.pfx -CertStoreLocation cert:\CurrentUser\My
