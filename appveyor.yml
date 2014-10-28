@@ -1,2 +1,3 @@
+# before build scripts
 before_build:
   - ps: Import-PfxCertificate -FilePath .\BasicOutlookAddIn\BasicOutlookAddIn_TemporaryKey.pfx -CertStoreLocation cert:\CurrentUser\My
