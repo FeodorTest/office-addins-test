@@ -1,3 +1,6 @@
 # before build scripts
 before_build:
   - ps: Import-PfxCertificate -FilePath .\BasicOutlookAddIn\BasicOutlookAddIn_TemporaryKey.pfx -CertStoreLocation cert:\CurrentUser\My
+
+build_script:
+  - msbuild.exe "BasicOutlookAddIn.sln" /logger:"C:\Program Files\AppVeyor\BuildAgent\Appveyor.MSBuildLogger.dll" /t:Publish
